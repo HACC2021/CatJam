@@ -14,11 +14,14 @@ class Landing extends React.Component {
   }
 
   render() {
-    let fRef = null;
     return (
       <Container className='messageBox'>
-        <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-        </AutoForm>
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/bf7a1356-cd70-4781-b839-5cd0cf082ce5">
+        </iframe>
         <Label as='a' color='blue' size='big'>
           <Icon name='phone'/>
           Phone
