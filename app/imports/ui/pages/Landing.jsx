@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 import { AutoForm } from 'uniforms-semantic';
-import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { UserMessage } from '../../api/userMessage/UserMessage';
 
@@ -11,15 +10,7 @@ const bridge = new SimpleSchema2Bridge(UserMessage.schema);
 class Landing extends React.Component {
   submit(data, formRef) {
     const { message } = data;
-    UserMessage.collection.insert({ message },
-      (error) => {
-        if (error) {
-          swal('Error', error.message, 'error');
-        } else {
-          swal('Success', 'Item added successfully', 'success');
-          formRef.reset();
-        }
-      });
+    UserMessage.collection.insert({ message }, formRef.reset());
   }
 
   render() {
