@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
+import { Container, Label, Icon } from 'semantic-ui-react';
 import { AutoForm } from 'uniforms-semantic';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { UserMessage } from '../../api/userMessage/UserMessage';
@@ -18,8 +18,17 @@ class Landing extends React.Component {
     return (
       <Container className='messageBox'>
         <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-
         </AutoForm>
+        <Label as='a' color='blue' size='big'>
+          <Icon name='phone'/>
+          Phone
+          <Label.Detail>808-594-1835</Label.Detail>
+        </Label>
+        <Label as='a' color='orange' size='big'>
+          <Icon name='mail'/>
+          Email
+          <Label.Detail>info@oha.org</Label.Detail>
+        </Label>
       </Container>
     );
   }
