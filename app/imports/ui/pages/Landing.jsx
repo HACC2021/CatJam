@@ -1,10 +1,7 @@
 import React from 'react';
 import { Container, Label, Icon } from 'semantic-ui-react';
-import { AutoForm } from 'uniforms-semantic';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { UserMessage } from '../../api/userMessage/UserMessage';
-
-const bridge = new SimpleSchema2Bridge(UserMessage.schema);
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
