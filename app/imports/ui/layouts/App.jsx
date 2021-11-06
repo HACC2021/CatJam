@@ -8,7 +8,11 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
+import Chatbot from '../pages/Chatbot';
+import Tutorial from '../pages/Tutorial';
+import EffectivenessAdmin from '../pages/EffectivenessAdmin';
+import SatisfactoryAdmin from '../pages/SatisfactoryAdmin';
+import StatsAdmin from '../pages/StatsAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
@@ -25,13 +29,17 @@ class App extends React.Component {
           <NavBar/>
           <Switch>
             <Route exact path="/" component={Landing}/>
+            <Route path="/chat" component={Chatbot}/>
+            <Route path="/tutor" component={Tutorial}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <ProtectedRoute path="/list" component={ListStuff}/>
             <ProtectedRoute path="/add" component={AddStuff}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <AdminProtectedRoute path="/stats" component={StatsAdmin}/>
+            <AdminProtectedRoute path="/effectiveness" component={EffectivenessAdmin}/>
+            <AdminProtectedRoute path="/satisfactory" component={SatisfactoryAdmin}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>
