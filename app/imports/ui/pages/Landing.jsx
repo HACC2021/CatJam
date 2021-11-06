@@ -1,22 +1,35 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
+import { AutoForm } from 'uniforms-semantic';
+import swal from 'sweetalert';
+import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
+import { UserMessage } from '../../api/userMessage/UserMessage';
+
+const bridge = new SimpleSchema2Bridge(UserMessage.schema);
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
+  submit(data, formRef) {
+    const { message } = data;
+    UserMessage.collection.insert({ message },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+          formRef.reset();
+        }
+      });
+  }
+
   render() {
+    let fRef = null;
     return (
-      <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
+      <Container className='messageBox'>
+        <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
 
-        <Grid.Column width={4}>
-          <Image size='small' circular src="/images/meteor-logo.png"/>
-        </Grid.Column>
-
-        <Grid.Column width={8}>
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Grid.Column>
-
-      </Grid>
+        </AutoForm>
+      </Container>
     );
   }
 }
