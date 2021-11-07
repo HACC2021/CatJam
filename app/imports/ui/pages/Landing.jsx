@@ -1,22 +1,29 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Container, Label, Icon } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
     return (
-      <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
+      <Container className='messageBox'>
+        <iframe
+          allow="microphone;"
+          width="1130"
+          height="768"
+          src="https://console.dialogflow.com/api-client/demo/embedded/a46422cc-7a5c-4a92-9123-5cf4423b3f0f">
+        </iframe>
 
-        <Grid.Column width={4}>
-          <Image size='small' circular src="/images/meteor-logo.png"/>
-        </Grid.Column>
-
-        <Grid.Column width={8}>
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Grid.Column>
-
-      </Grid>
+        <Label as='a' color='blue' size='big'>
+          <Icon name='phone'/>
+          Phone
+          <Label.Detail>808-594-1835</Label.Detail>
+        </Label>
+        <Label as='a' color='orange' size='big'>
+          <Icon name='mail'/>
+          Email
+          <Label.Detail>info@oha.org</Label.Detail>
+        </Label>
+      </Container>
     );
   }
 }
