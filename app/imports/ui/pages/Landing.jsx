@@ -13,7 +13,7 @@ class Landing extends React.Component {
             height="768"
             src="https://console.dialogflow.com/api-client/demo/embedded/a46422cc-7a5c-4a92-9123-5cf4423b3f0f">
           </iframe>
-          <Label as='a' color='blue' size='big'>
+          <Label as='a' color='olive' size='big'>
             <Icon name='phone'/>
           Phone
             <Label.Detail><a href="tel: 808-594-1835" className="white-text" >808-594-1835</a></Label.Detail>
