@@ -5,7 +5,7 @@ import { Container, Label, Icon } from 'semantic-ui-react';
 class Landing extends React.Component {
   render() {
     return (
-      <div className='green-background'>
+      <div>
         <Container className='messageBox'>
           <iframe
             allow="microphone;"
