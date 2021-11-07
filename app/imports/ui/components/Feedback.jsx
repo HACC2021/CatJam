@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 /** Renders a single row in the List Stuff (Admin) table. See pages/ListStuffAdmin.jsx. */
 class FeedBack extends React.Component {
   removeFeedback(docID) {
-    this.props.UserFeedbacks.Collection.remove(docID);
+    this.props.UserFeedbacks.collection.remove(docID);
   }
 
   render() {
@@ -34,7 +34,7 @@ FeedBack.propTypes = {
     feedbackType: PropTypes.string,
     _id: PropTypes.string,
     description: PropTypes.string,
-    createdAt: PropTypes.string,
+    createdAt: PropTypes.date,
   }).isRequired,
   UserFeedbacks: PropTypes.object.isRequired,
 };

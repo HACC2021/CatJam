@@ -17,8 +17,8 @@ class UserFeedbacksCollection {
       summary: String,
       feedbackType: {
         type: String,
-        allowedValues: ['excellent', 'good', 'fair', 'poor'],
-        defaultValue: 'good',
+        allowedValues: ['Improvement', 'Incorrect/missing information', 'Bugs and errors', 'other'],
+        defaultValue: 'Improvement',
       },
       description: String,
       createdAt: Date,
