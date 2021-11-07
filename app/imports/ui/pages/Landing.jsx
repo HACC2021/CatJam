@@ -1,21 +1,15 @@
 import React from 'react';
 import { Container, Label, Icon } from 'semantic-ui-react';
-import { UserMessage } from '../../api/userMessage/UserMessage';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
-  submit(data, formRef) {
-    const { message } = data;
-    UserMessage.collection.insert({ message }, formRef.reset());
-  }
-
   render() {
     return (
       <Container className='messageBox'>
         <iframe
           allow="microphone;"
-          width="350"
-          height="430"
+          width="1130"
+          height="768"
           src="https://console.dialogflow.com/api-client/demo/embedded/a46422cc-7a5c-4a92-9123-5cf4423b3f0f">
         </iframe>
 
