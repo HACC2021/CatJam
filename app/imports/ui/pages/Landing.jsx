@@ -23,6 +23,11 @@ class Landing extends React.Component {
           Email
           <Label.Detail><a href="mailto: info@oha.org" className="white-text">info@oha.org</a></Label.Detail>
         </Label>
+        <Label as='a' color='teal' size='big'>
+          <Icon name='mouse pointer'/>
+          Website
+          <Label.Detail><a href="https://www.oha.org/" className="white-text">https://www.oha.org/</a></Label.Detail>
+        </Label>
       </Container>
     );
   }
