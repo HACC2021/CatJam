@@ -16,12 +16,12 @@ class Landing extends React.Component {
         <Label as='a' color='blue' size='big'>
           <Icon name='phone'/>
           Phone
-          <Label.Detail>808-594-1835</Label.Detail>
+          <Label.Detail><a href="tel: 808-594-1835" className="white-text" >808-594-1835</a></Label.Detail>
         </Label>
         <Label as='a' color='orange' size='big'>
           <Icon name='mail'/>
           Email
-          <Label.Detail>info@oha.org</Label.Detail>
+          <Label.Detail><a href="mailto: info@oha.org" className="white-text">info@oha.org</a></Label.Detail>
         </Label>
       </Container>
     );
