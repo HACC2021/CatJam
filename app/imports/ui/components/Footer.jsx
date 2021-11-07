@@ -6,7 +6,7 @@ class Footer extends React.Component {
     const divStyle = { paddingTop: '30px', backgroundColor: '#3469CA', color: 'white', borderTop: '5px solid #3469CA' };
     return (
 
-      <footer>
+      <footer className='blue-background'>
         <div style={divStyle} className="ui center aligned container">
               Beneficiary Services Chatbot <br />
               Office of Hawaiian Affairs<br />
