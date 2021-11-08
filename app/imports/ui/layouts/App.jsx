@@ -20,6 +20,7 @@ import SendFeedback from '../pages/SendFeedback';
 import ListFeedbacks from '../pages/ListFeedbacks';
 import AddIntent from '../pages/AddIntent';
 import ListIntent from '../pages/ListIntent';
+import EditIntent from '../pages/EditIntent';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
             <AdminProtectedRoute path="/stats" component={StatsAdmin}/>
             <AdminProtectedRoute path="/addintent" component={AddIntent}/>
             <AdminProtectedRoute path="/listintent" component={ListIntent}/>
+            <AdminProtectedRoute path="/edit" component={EditIntent}/>
             <AdminProtectedRoute path="/effectiveness" component={EffectivenessAdmin}/>
             <AdminProtectedRoute path="/satisfactory" component={SatisfactoryAdmin}/>
             <AdminProtectedRoute path="/viewfeedbacks" component={ListFeedbacks}/>

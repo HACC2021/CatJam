@@ -9,9 +9,11 @@ class StuffItemAdmin extends React.Component {
     return (
       <Table.Row>
         <Table.Cell>{this.props.stuff.name}</Table.Cell>
-        <Table.Cell>{this.props.stuff.quantity}</Table.Cell>
-        <Table.Cell>{this.props.stuff.condition}</Table.Cell>
-        <Table.Cell>{this.props.stuff.owner}</Table.Cell>
+        <Table.Cell>{this.props.stuff.phrase}</Table.Cell>
+        <Table.Cell>{this.props.stuff.response}</Table.Cell>
+        <Table.Cell>
+          <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
+        </Table.Cell>
       </Table.Row>
     );
   }
@@ -19,7 +21,12 @@ class StuffItemAdmin extends React.Component {
 
 // Require a document to be passed to this component.
 StuffItemAdmin.propTypes = {
-  stuff: PropTypes.object.isRequired,
+  stuff: PropTypes.shape({
+    name: PropTypes.string,
+    phrase: PropTypes.string,
+    response: PropTypes.string,
+    _id: PropTypes.string,
+  }).isRequired,
 };
 
 export default StuffItemAdmin;

@@ -4,6 +4,7 @@ import { Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Intents } from '../../api/Intents/Intents';
+import Intent from '../components/Intent';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListIntent extends React.Component {
@@ -24,11 +25,11 @@ class ListIntent extends React.Component {
               <Table.HeaderCell>Name</Table.HeaderCell>
               <Table.HeaderCell>Phrase</Table.HeaderCell>
               <Table.HeaderCell>Response</Table.HeaderCell>
-              <Table.HeaderCell>Owner</Table.HeaderCell>
+              <Table.HeaderCell>Edit</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {this.props.stuffs.map((intent) => <Intents key={intent._id} intent={intent} />)}
+            {this.props.stuffs.map((stuff) => <Intent key={stuff._id} stuff={stuff} />)}
           </Table.Body>
         </Table>
       </Container>

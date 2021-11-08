@@ -39,7 +39,6 @@ class EditIntent extends React.Component {
               <TextField name='response'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
-              <HiddenField name='owner' />
             </Segment>
           </AutoForm>
         </Grid.Column>
