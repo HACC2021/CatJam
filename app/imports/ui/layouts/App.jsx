@@ -7,7 +7,6 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import Chatbot from '../pages/Chatbot';
 import Tutorial from '../pages/Tutorial';
 import EffectivenessAdmin from '../pages/EffectivenessAdmin';
 import SatisfactoryAdmin from '../pages/SatisfactoryAdmin';
@@ -31,7 +30,6 @@ class App extends React.Component {
           <NavBar/>
           <Switch>
             <Route exact path="/" component={Landing}/>
-            <Route path="/chat" component={Chatbot}/>
             <Route path="/tutor" component={Tutorial}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
