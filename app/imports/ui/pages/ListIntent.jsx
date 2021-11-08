@@ -3,11 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Intents } from '../../api/stuff/Stuff';
-import StuffItemAdmin from '../components/StuffItemAdmin';
+import { Intents } from '../../api/Intents/Intents';
+import Intent from '../components/Intent';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListStuffAdmin extends React.Component {
+class ListIntent extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,18 +18,18 @@ class ListStuffAdmin extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center">List Stuff (Admin)</Header>
+        <Header as="h2" textAlign="center">List Intent</Header>
         <Table celled>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Name</Table.HeaderCell>
-              <Table.HeaderCell>Quantity</Table.HeaderCell>
-              <Table.HeaderCell>Condition</Table.HeaderCell>
-              <Table.HeaderCell>Owner</Table.HeaderCell>
+              <Table.HeaderCell>Phrase</Table.HeaderCell>
+              <Table.HeaderCell>Response</Table.HeaderCell>
+              <Table.HeaderCell>Edit</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} stuff={stuff} />)}
+            {this.props.intents.map((intent) => <Intent key={intent._id} intent={intent} />)}
           </Table.Body>
         </Table>
       </Container>
@@ -38,8 +38,8 @@ class ListStuffAdmin extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-ListStuffAdmin.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+ListIntent.propTypes = {
+  intents: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -50,9 +50,9 @@ export default withTracker(() => {
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Stuff documents
-  const stuffs = Intents.collection.find({}).fetch();
+  const intents = Intents.collection.find({}).fetch();
   return {
-    stuffs,
+    intents,
     ready,
   };
-})(ListStuffAdmin);
+})(ListIntent);
