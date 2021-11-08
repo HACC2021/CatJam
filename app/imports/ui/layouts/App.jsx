@@ -36,12 +36,12 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/sendfeedback" component={SendFeedback}/>
-            <AdminProtectedRoute path="/stats" component={StatsAdmin}/>
-            <AdminProtectedRoute path="/addintent" component={AddIntent}/>
-            <AdminProtectedRoute path="/editintent" component={EditIntent}/>
-            <AdminProtectedRoute path="/effectiveness" component={EffectivenessAdmin}/>
-            <AdminProtectedRoute path="/satisfactory" component={SatisfactoryAdmin}/>
-            <AdminProtectedRoute path="/viewfeedbacks" component={ListFeedbacks}/>
+            <ProtectedRoute path="/stats" component={StatsAdmin}/>
+            <ProtectedRoute path="/addintent" component={AddIntent}/>
+            <ProtectedRoute path="/editintent" component={EditIntent}/>
+            <ProtectedRoute path="/effectiveness" component={EffectivenessAdmin}/>
+            <ProtectedRoute path="/satisfactory" component={SatisfactoryAdmin}/>
+            <ProtectedRoute path="/viewfeedbacks" component={ListFeedbacks}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>
