@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Intents } from '../../api/Intents/Intents';
+import createIntent from '../../startup/server/Api';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -23,6 +24,7 @@ class AddIntent extends React.Component {
   submit(data, formRef) {
     const { name, phrase, response } = data;
     const owner = Meteor.user().username;
+    Meteor.call('createIntent', data);
     Intents.collection.insert({ name, phrase, response, owner },
       (error) => {
         if (error) {
