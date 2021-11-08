@@ -29,7 +29,7 @@ class ListIntent extends React.Component {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {this.props.stuffs.map((stuff) => <Intent key={stuff._id} stuff={stuff} />)}
+            {this.props.intents.map((intent) => <Intent key={intent._id} intent={intent} />)}
           </Table.Body>
         </Table>
       </Container>
@@ -39,7 +39,7 @@ class ListIntent extends React.Component {
 
 // Require an array of Stuff documents in the props.
 ListIntent.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  intents: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -50,9 +50,9 @@ export default withTracker(() => {
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Stuff documents
-  const stuffs = Intents.collection.find({}).fetch();
+  const intents = Intents.collection.find({}).fetch();
   return {
-    stuffs,
+    intents,
     ready,
   };
 })(ListIntent);

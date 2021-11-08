@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff (Admin) table. See pages/ListStuffAdmin.jsx. */
-class StuffItemAdmin extends React.Component {
+class Intent extends React.Component {
   render() {
     return (
       <Table.Row>
-        <Table.Cell>{this.props.stuff.name}</Table.Cell>
-        <Table.Cell>{this.props.stuff.phrase}</Table.Cell>
-        <Table.Cell>{this.props.stuff.response}</Table.Cell>
+        <Table.Cell>{this.props.intent.name}</Table.Cell>
+        <Table.Cell>{this.props.intent.phrase}</Table.Cell>
+        <Table.Cell>{this.props.intent.response}</Table.Cell>
         <Table.Cell>
-          <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
+          <Link to={`/edit/${this.props.intent._id}`}>Edit</Link>
         </Table.Cell>
       </Table.Row>
     );
@@ -20,8 +20,8 @@ class StuffItemAdmin extends React.Component {
 }
 
 // Require a document to be passed to this component.
-StuffItemAdmin.propTypes = {
-  stuff: PropTypes.shape({
+Intent.propTypes = {
+  intent: PropTypes.shape({
     name: PropTypes.string,
     phrase: PropTypes.string,
     response: PropTypes.string,
@@ -29,4 +29,4 @@ StuffItemAdmin.propTypes = {
   }).isRequired,
 };
 
-export default StuffItemAdmin;
+export default Intent;
