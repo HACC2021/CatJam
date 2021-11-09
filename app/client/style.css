@@ -2,6 +2,10 @@
   color: white;
 }
 
+.messageBox{
+  padding-bottom: 15px;
+}
+
 .blue-background{
   background-color: #3469CA;
 }
