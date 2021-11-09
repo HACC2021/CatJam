@@ -26,7 +26,7 @@ class Landing extends React.Component {
           <Label as='a' color='teal' size='big'>
             <Icon name='mouse pointer'/>
           Website
-            <Label.Detail><a href="https://www.oha.org/" className="white-text">https://www.oha.org/</a></Label.Detail>
+            <Label.Detail><a target="_blank" rel="noopener noreferrer" href="https://www.oha.org/" className="white-text">https://www.oha.org/</a></Label.Detail>
           </Label>
         </Container>
       </div>
