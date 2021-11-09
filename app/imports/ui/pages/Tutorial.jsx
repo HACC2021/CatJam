@@ -22,7 +22,7 @@ class Tutorial extends React.Component {
         <p>After asking a question the text will be displayed inside a message on the left side of the screen. Then the chatbot will send a response contained in a message on the right side of the screen.</p>
         <Image src='images/message1.png'/>
         <p>If you need to contact OHA for any reason, their phone and email contacts are available via the buttons below the chatbot. A link to the OHA official website is also provided.</p>
-        <Image src='img.png'/>
+        <Image src='contact.png'/>
         <Header as="h3" textAlign="center">Send Feedback</Header>
         <Image src='images/feedback.png'/>
         {/* eslint-disable-next-line max-len */}
