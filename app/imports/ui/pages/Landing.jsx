@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Label, Icon } from 'semantic-ui-react';
+import { Container, Label, Icon, Header, Message } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -7,6 +7,10 @@ class Landing extends React.Component {
     return (
       <div>
         <Container className='messageBox'>
+          <Message color='green'>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <Header as='h4' textAlign='center'>Welcome to OHA Catbot! Click on "Tutorial" in the navbar to view a quick guide on how to use this application. You can ask your questions through the chatbot below, or call (732) 307-3105 for help.</Header>
+          </Message>
           <iframe
             allow="microphone;"
             width="1130"

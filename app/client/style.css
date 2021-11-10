@@ -9,3 +9,23 @@
 .blue-background{
   background-color: #3469CA;
 }
+
+.tutorial-background {
+  background-color: #EDF7FF;
+}
+
+.line {
+  background-color: black;
+  margin-bottom: 15px;
+  height: 1px;
+}
+
+.bottom {
+  padding-bottom: 15px;
+}
+
+p {
+  font-family: SansSerif, serif;
+  font-size: 17px;
+}
+
