@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class EffectivenessAdmin extends React.Component {
+class AnalyticsAdmin extends React.Component {
 
   // Render the page once subscriptions have been received.
   render() {
@@ -16,4 +16,4 @@ class EffectivenessAdmin extends React.Component {
 }
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-export default EffectivenessAdmin;
+export default AnalyticsAdmin;

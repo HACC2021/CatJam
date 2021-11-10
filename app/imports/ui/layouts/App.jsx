@@ -8,9 +8,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import Tutorial from '../pages/Tutorial';
-import EffectivenessAdmin from '../pages/EffectivenessAdmin';
-import SatisfactoryAdmin from '../pages/SatisfactoryAdmin';
-import StatsAdmin from '../pages/StatsAdmin';
+import AnalyticsAdmin from '../pages/AnalyticsAdmin';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -35,12 +33,10 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/sendfeedback" component={SendFeedback}/>
-            <AdminProtectedRoute path="/stats" component={StatsAdmin}/>
             <AdminProtectedRoute path="/addintent" component={AddIntent}/>
             <AdminProtectedRoute path="/listintent" component={ListIntent}/>
             <AdminProtectedRoute path="/edit" component={EditIntent}/>
-            <AdminProtectedRoute path="/effectiveness" component={EffectivenessAdmin}/>
-            <AdminProtectedRoute path="/satisfactory" component={SatisfactoryAdmin}/>
+            <AdminProtectedRoute path="/analytics" component={AnalyticsAdmin}/>
             <AdminProtectedRoute path="/viewfeedbacks" component={ListFeedbacks}/>
             <Route component={NotFound}/>
           </Switch>
