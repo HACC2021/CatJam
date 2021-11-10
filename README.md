@@ -1,4 +1,4 @@
-# OHA Cat Bot
+# OHA CatBot
 
 ## Installation
 1. Install [Node.js](https://nodejs.org/en/)
