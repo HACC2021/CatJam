@@ -10,6 +10,7 @@ import { Roles } from 'meteor/alanning:roles';
 class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '10px', backgroundColor: '#3469CA' };
+
     return (
       <Menu style={menuStyle} attached="top" borderless inverted>
         <Menu.Item>
@@ -19,13 +20,7 @@ class NavBar extends React.Component {
         <Menu.Item as={NavLink} activeClassName="active" exact to="/tutor" key='tutor'>Tutorial</Menu.Item>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/sendfeedback" key='sendfeedback'>Send Feedback</Menu.Item>
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/stats" key='stats'>Chatbot Statistics</Menu.Item>
-        ) : ''}
-        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/effectiveness" key='effectiveness'>Chatbot Effectiveness</Menu.Item>
-        ) : ''}
-        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/satisfactory" key='satisfactory'>Satisfaction Rates</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/analytics" key='analytics'>Chat bot Analytics</Menu.Item>
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <Menu.Item as={NavLink} activeClassName="active" exact to="/viewfeedbacks" key='viewfeedbacks'>View Feedbacks</Menu.Item>
