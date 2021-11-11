@@ -9,7 +9,7 @@ class Landing extends React.Component {
         <Container className='messageBox'>
           <Message color='green'>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <Header as='h4' textAlign='center'>Welcome to OHA Catbot! Click on "Tutorial" in the navbar to view a quick guide on how to use this application.
+            <Header as='h4' textAlign='center'><Icon name='bullhorn'/>Welcome to OHA Catbot! Click on "Tutorial" in the navbar to view a quick guide on how to use this application.
               You can ask your questions through the chatbot below, or call (732) 307-3105 for help.</Header>
           </Message>
           <iframe

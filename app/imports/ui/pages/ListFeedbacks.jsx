@@ -18,7 +18,7 @@ class ListFeedback extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center">List User&apos;s Feedbacks</Header>
+        <Header as="h2" textAlign="center">List User Feedback</Header>
         <Table celled>
           <Table.Header>
             <Table.Row>
